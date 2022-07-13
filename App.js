@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import React from 'react';
+import {View,Text,Image,StyleSheet,SafeAreaView,ImageBackground,TouchableOpacity, Button,} from 'react-native';
 
-export default function App() {
+import Login from './src/auth/Login';
+import Register from './src/auth/Register';
+import Forget from './src/auth/Forget';
+import AppRouter from './src/router/router';
+import Splash from './src/splash/splash';
+
+
+
+
+
+const App = (props) => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppRouter/>    
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+export default App;
+
+
